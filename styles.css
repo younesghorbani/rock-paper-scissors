@@ -109,3 +109,8 @@ p {
     transform: rotateX(180deg);
     transform: rotateY(180deg);
 }
+
+.computer-side .card.paper {
+    margin-left: 15px;
+    margin-right: 10px;
+}
