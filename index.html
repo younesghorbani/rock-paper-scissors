@@ -8,30 +8,32 @@
     <title>Let's play Rock Paper Scissors</title>
 </head>
 <body>
-    <h1>
-        Let's play <span>Rock</span> <span>Paper</span> <span>Scissors</span>
-    </h1>
-
-    <main class="playground">
-        <p>Choose your weapon against the computer!</p>
-        <div class="sides">
-            <div class="player-side">
-                <div class="card rock"></div>
-                <div class="card paper"></div>
-                <div class="card scissors"></div>
+    <section class="container">
+        <h1>
+            Let's play <span>Rock</span> <span>Paper</span> <span>Scissors</span>
+        </h1>
+    
+        <main class="playground">
+            <p>Choose your weapon against the computer!</p>
+            <div class="sides">
+                <div class="player-side">
+                    <div class="card rock"></div>
+                    <div class="card paper"></div>
+                    <div class="card scissors"></div>
+                </div>
+                <span class="versus">VS</span>
+                <div class="computer-side">
+                    <div class="card scissors"></div>
+                    <div class="card paper"></div>
+                    <div class="card rock"></div>
+                </div>
             </div>
-            <span class="versus">VS</span>
-            <div class="computer-side">
-                <div class="card scissors"></div>
-                <div class="card paper"></div>
-                <div class="card rock"></div>
-            </div>
-        </div>
-    </main>
-
-    <section class="results">
-        <p class="title">Results of each round</p>
-        <div class="content"></div>
+        </main>
+    
+        <section class="results">
+            <p class="title">Results of each round</p>
+            <div class="content"></div>
+        </section>
     </section>
 
     <script src="script.js"></script>
