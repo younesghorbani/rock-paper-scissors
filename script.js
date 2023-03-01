@@ -29,15 +29,16 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    let playerScore = computerScore = 0;
-    let round = 0;
+let playerScore = computerScore = 0;
+let round = 0;
+
+function game(event) {
     let result;
 
-    while (playerScore < 5 && computerScore < 5) {
+    if (playerScore < 5 && computerScore < 5) {
         round++;
 
-        const playerSelection = prompt('Choose one. "Rock", "Paper" or "Scissors" (Case Insensitive)', 'Rock');
+        const playerSelection = capitalize(event.target.classList[1]);
         const computerSelection = getComputerChoice();
         
         result = playRound(playerSelection, computerSelection);
@@ -47,19 +48,24 @@ function game() {
 
         console.log(`Round #${round}: ${result}`);
         console.log(`You ${playerScore} - ${computerScore} Computer`);
-    }
-
-    console.log('Final result:');
-
-    if (playerScore > computerScore) {
-        console.log(`Your score: ${playerScore}`);
-        console.log(`Computer score: ${computerScore}`);
-        console.log('Hooray! You are the WINNER :)');
     } else {
-        console.log(`Your score: ${playerScore}`);
-        console.log(`Computer score: ${computerScore}`);
-        console.log('Sorry! You LOST :(');
+        weapons.forEach(weapon => weapon.style.pointerEvents = 'none');
+        weapons.forEach(weapon => weapon.removeEventListener('click', game));
+
+        console.log('Final result:');
+
+        if (playerScore > computerScore) {
+            console.log(`Your score: ${playerScore}`);
+            console.log(`Computer score: ${computerScore}`);
+            console.log('Hooray! You are the WINNER :)');
+        } else {
+            console.log(`Your score: ${playerScore}`);
+            console.log(`Computer score: ${computerScore}`);
+            console.log('Sorry! You LOST :(');
+        }
     }
 }
 
-game();
+const weapons = document.querySelectorAll('.player-side div');
+
+weapons.forEach(weapon => weapon.addEventListener('click', game));
