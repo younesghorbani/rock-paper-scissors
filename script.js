@@ -15,6 +15,20 @@ function capitalize(word) {
     return word.slice(0, 1).toUpperCase().concat(word.slice(1).toLowerCase());
 }
 
+function showResult() {
+    console.log('Final result:');
+
+    if (playerScore > computerScore) {
+        console.log(`Your score: ${playerScore}`);
+        console.log(`Computer score: ${computerScore}`);
+        console.log('Hooray! You are the WINNER :)');
+    } else {
+        console.log(`Your score: ${playerScore}`);
+        console.log(`Computer score: ${computerScore}`);
+        console.log('Sorry! You LOST :(');
+    }
+}
+
 function playRound(playerSelection, computerSelection) {
     if (capitalize(playerSelection).localeCompare(computerSelection) === 0) {
         return `It's a tie! Both of you chose ${computerSelection}.`;
@@ -51,18 +65,8 @@ function game(event) {
     } else {
         weapons.forEach(weapon => weapon.style.pointerEvents = 'none');
         weapons.forEach(weapon => weapon.removeEventListener('click', game));
-
-        console.log('Final result:');
-
-        if (playerScore > computerScore) {
-            console.log(`Your score: ${playerScore}`);
-            console.log(`Computer score: ${computerScore}`);
-            console.log('Hooray! You are the WINNER :)');
-        } else {
-            console.log(`Your score: ${playerScore}`);
-            console.log(`Computer score: ${computerScore}`);
-            console.log('Sorry! You LOST :(');
-        }
+        
+        showResult();
     }
 }
 
