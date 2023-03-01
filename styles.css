@@ -81,14 +81,6 @@ p {
     transition: scale 0.2s ease;
 }
 
-.card:hover {
-    cursor: pointer;
-}
-
-.card:active {
-    scale: 0.95;
-}
-
 .card.rock {
     background-image: url(images/rock.png);
 }
@@ -101,6 +93,14 @@ p {
 
 .card.scissors {
     background-image: url(images/scissors.png);
+}
+
+.player-side .card:hover {
+    cursor: pointer;
+}
+
+.player-side .card:active {
+    scale: 0.95;
 }
 
 .versus {
