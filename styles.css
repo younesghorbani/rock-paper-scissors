@@ -136,6 +136,25 @@ p {
 }
 
 .content {
-    padding-top: 10px;
-    text-align: center;
+    margin-top: 5px;
+    max-height: 240px;
+    overflow: auto;
+}
+
+.content::-webkit-scrollbar {
+    width: 15px;
+}
+
+.content::-webkit-scrollbar-track {
+    background-color: #4d6d9a;
+    border-radius: 10px;
+}
+  
+.content::-webkit-scrollbar-thumb {
+    background-color: #74dae2;
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb:active {
+    background-color: #ffde55;
 }
