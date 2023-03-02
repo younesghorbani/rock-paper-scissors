@@ -16,17 +16,24 @@ function capitalize(word) {
 }
 
 function showResult() {
-    console.log('Final result:');
+    const player = document.getElementsByClassName('player');
+    const computer = document.getElementsByClassName('computer');
+    const message = document.getElementsByClassName('message');
+    const status = document.createElement('span');
 
     if (playerScore > computerScore) {
-        console.log(`Your score: ${playerScore}`);
-        console.log(`Computer score: ${computerScore}`);
-        console.log('Hooray! You are the WINNER :)');
+        player[0].textContent = playerScore;
+        computer[0].textContent = computerScore;
+        status.textContent = 'WINNER';
+        status.style.color = '#90ee90';
+        message[0].innerHTML = 'Hooray! You are the ' + status.outerHTML + ' :)';
 
     } else {
-        console.log(`Your score: ${playerScore}`);
-        console.log(`Computer score: ${computerScore}`);
-        console.log('Sorry! You LOST :(');
+        player[0].textContent = playerScore;
+        computer[0].textContent = computerScore;
+        status.textContent = 'LOST';
+        status.style.color = '#f08080';
+        message[0].innerHTML = 'Sorry! You ' + status.outerHTML + ' :(';
     }
 }
 
