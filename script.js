@@ -22,6 +22,7 @@ function showResult() {
         console.log(`Your score: ${playerScore}`);
         console.log(`Computer score: ${computerScore}`);
         console.log('Hooray! You are the WINNER :)');
+
     } else {
         console.log(`Your score: ${playerScore}`);
         console.log(`Computer score: ${computerScore}`);
@@ -43,6 +44,8 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+const content = document.getElementsByClassName('content');
+
 let playerScore = computerScore = 0;
 let round = 0;
 
@@ -60,8 +63,8 @@ function game(event) {
         if (result.includes('won')) playerScore++;
         if (result.includes('lost')) computerScore++;
 
-        console.log(`Round #${round}: ${result}`);
-        console.log(`You ${playerScore} - ${computerScore} Computer`);
+        content[0].innerHTML += `Round #${round}: ${result}<br>` +
+                                `You ${playerScore} - ${computerScore} Computer<br>`;
     } else {
         weapons.forEach(weapon => weapon.style.pointerEvents = 'none');
         weapons.forEach(weapon => weapon.removeEventListener('click', game));
