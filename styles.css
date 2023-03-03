@@ -105,7 +105,7 @@ p {
 
 .versus {
     font-family: 'Dancing Script', cursive;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .computer-side .card {
@@ -176,7 +176,7 @@ p {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 58px;
+    min-height: 60px;
     line-height: 1.2;
 }
 
