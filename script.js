@@ -77,8 +77,8 @@ function game(event) {
         if (result.includes('lost')) computerScore++;
 
         setTimeout(() => {
-            content[0].innerHTML += `Round #${round}: ${result}<br>` +
-            `You ${playerScore} - ${computerScore} Computer<br>`;
+            content[0].innerHTML += `<span>Round #${round}: ${result}<br>` +
+            `You ${playerScore} - ${computerScore} Computer</span><br>`;
         }, 650);
     } else {
         userWeapons.forEach(weapon => weapon.style.pointerEvents = 'none');
