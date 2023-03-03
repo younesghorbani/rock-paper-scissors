@@ -66,8 +66,7 @@ function game(event) {
         const computerSelection = getComputerChoice();
 
         const computerWeapon = document.querySelector(
-            `.computer-side .card.${computerSelection.toLowerCase()}`
-            );
+            `.computer-side .card.${computerSelection.toLowerCase()}`);
 
         setTimeout(() => computerWeapon.classList.add('shrink'), 150);
         setTimeout(() => computerWeapon.classList.remove('shrink'), 350);
@@ -77,8 +76,10 @@ function game(event) {
         if (result.includes('won')) playerScore++;
         if (result.includes('lost')) computerScore++;
 
-        content[0].innerHTML += `Round #${round}: ${result}<br>` +
-                                `You ${playerScore} - ${computerScore} Computer<br>`;
+        setTimeout(() => {
+            content[0].innerHTML += `Round #${round}: ${result}<br>` +
+            `You ${playerScore} - ${computerScore} Computer<br>`;
+        }, 650);
     } else {
         weapons.forEach(weapon => weapon.style.pointerEvents = 'none');
         weapons.forEach(weapon => weapon.removeEventListener('click', game));
