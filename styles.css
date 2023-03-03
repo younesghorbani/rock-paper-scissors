@@ -118,6 +118,10 @@ p {
     margin-right: 10px;
 }
 
+.shrink {
+    scale: 0.95;
+}
+
 .results {
     width: 100%;
     padding: 0px 20px 20px;
