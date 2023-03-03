@@ -64,6 +64,13 @@ function game(event) {
 
         const playerSelection = capitalize(event.target.classList[1]);
         const computerSelection = getComputerChoice();
+
+        const computerWeapon = document.querySelector(
+            `.computer-side .card.${computerSelection.toLowerCase()}`
+            );
+
+        setTimeout(() => computerWeapon.classList.add('shrink'), 150);
+        setTimeout(() => computerWeapon.classList.remove('shrink'), 350);
         
         result = playRound(playerSelection, computerSelection);
 
