@@ -88,6 +88,6 @@ function game(event) {
     }
 }
 
-const weapons = document.querySelectorAll('.player-side div');
+const userWeapons = document.querySelectorAll('.player-side div');
 
-weapons.forEach(weapon => weapon.addEventListener('click', game));
+userWeapons.forEach(weapon => weapon.addEventListener('click', game));
