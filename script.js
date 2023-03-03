@@ -81,8 +81,8 @@ function game(event) {
             `You ${playerScore} - ${computerScore} Computer<br>`;
         }, 650);
     } else {
-        weapons.forEach(weapon => weapon.style.pointerEvents = 'none');
-        weapons.forEach(weapon => weapon.removeEventListener('click', game));
+        userWeapons.forEach(weapon => weapon.style.pointerEvents = 'none');
+        userWeapons.forEach(weapon => weapon.removeEventListener('click', game));
         
         showResult();
     }
