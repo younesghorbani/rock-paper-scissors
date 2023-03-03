@@ -40,11 +40,6 @@ h1 span:last-of-type {
     color: #74dae2;
 }
 
-p {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -55,6 +50,11 @@ p {
     padding: 20px;
     background-color: #265077;
     border-radius: 10px;
+}
+
+.playground p {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .sides {
@@ -132,7 +132,6 @@ p {
 }
 
 .title {
-    font-size: 16px;
     padding: 5px 0px;
     margin-bottom: 0;
     border-bottom: 1px solid #ef5480;
