@@ -12,7 +12,6 @@ body {
     background-color: #4d6d9a;
     color: #f9faf8;
     min-height: 100vh;
-    overflow: hidden;
 }
 
 a {
@@ -201,8 +200,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #265077;
-    margin-top: 17px;
-    padding: 5px 0;
-    border-radius: 10px 10px 0px 0;
+    margin-top: 10px;
+    font-size: 13px;
 }
