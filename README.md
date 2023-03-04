@@ -16,8 +16,8 @@ For me, the most challenging part was when I first wanted to display
 something on the page using JavaScript, and that was displaying 
 the results of each round. To show the results, you must first 
 select the section in which the results are to be displayed. For this, 
-you should use "getElementBy*" or "querySelector*" commands. 
-These commands return an array-like of selected element(s). So like an array, 
+you should use "getElementsBy*" or "querySelector*" methods. 
+These methods return an array-like of selected element(s). So like an array, 
 the results must be stored in indices to be visible on the page. 
 It took me an hour or two to figure this out and solve it. 
 There were other challenges, but none more time-consuming than the one mentioned.
