@@ -1,4 +1,4 @@
-# rock-paper-scissors
+# Rock-Paper-Scissors
 
 This project is about the lovely "Rock Paper Scissors" game.<br>
 In this version of the game, there are two players, 
