@@ -27,7 +27,6 @@ function showResult() {
         status.textContent = 'WINNER';
         status.style.color = '#90ee90';
         message[0].innerHTML = 'Hooray! You are the ' + status.outerHTML + ' :)';
-
     } else {
         player[0].textContent = playerScore;
         computer[0].textContent = computerScore;
@@ -38,16 +37,16 @@ function showResult() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (capitalize(playerSelection).localeCompare(computerSelection) === 0) {
+    if (playerSelection.localeCompare(computerSelection) === 0) {
         return `It's a tie! Both of you chose ${computerSelection}.`;
-    } else if (capitalize(playerSelection) === 'Rock' && computerSelection === 'Scissors') {
-        return `You won! ${capitalize(playerSelection)} beats ${computerSelection}.`;
-    } else if (capitalize(playerSelection) === 'Scissors' && computerSelection === 'Paper') {
-        return `You won! ${capitalize(playerSelection)} beats ${computerSelection}.`;
-    } else if (capitalize(playerSelection) === 'Paper' && computerSelection === 'Rock') {
-        return `You won! ${capitalize(playerSelection)} beats ${computerSelection}.`;
+    } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
+        return `You won! ${playerSelection} beats ${computerSelection}.`;
+    } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
+        return `You won! ${playerSelection} beats ${computerSelection}.`;
+    } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
+        return `You won! ${playerSelection} beats ${computerSelection}.`;
     } else {
-        return `You lost! ${computerSelection} beats ${capitalize(playerSelection)}.`;
+        return `You lost! ${computerSelection} beats ${playerSelection}.`;
     }
 }
 
